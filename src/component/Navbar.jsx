@@ -80,10 +80,10 @@ function RootLayout() {
       {/* add button to close and open sidebar in mobile */}
       <div className="text-white z-50">
         <CloseButton
-          className="fixed bottom-5 right-5 z-[9999]  lg:hidden block "
+          className="fixed bottom-5 right-5 z-[9999] lg:hidden block "
           onClick={() => setCloseOpeen(!closeOpen)}
         >
-          {closeOpen ? <BsList /> : <IoMdClose />}
+          {closeOpen ? <IoMdClose /> : <BsList />}
         </CloseButton>
       </div>
       {/* singup and login */}
