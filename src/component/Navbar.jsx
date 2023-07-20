@@ -56,7 +56,7 @@ function RootLayout() {
         <div className="max-w-screen-xl flex flex-row lg:flex-row-reverse flex-wrap items-center justify-between h-full mx-auto mt-10 lg:mt-0 ">
           <div className="BtnLog ">
             <div onClick={() => setOpenLogin(true)}>
-              <Button>login</Button>
+              <Button onClick={() => setCloseOpeen(!closeOpen)}>login</Button>
             </div>
           </div>
           <div className="h-full lg:w-auto w-full">
