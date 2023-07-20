@@ -109,7 +109,7 @@ export default Rejecter;
 
 const LogInDiv = styled.div`
   position: fixed;
-  top: -5%;
+  top: -10%;
   left: 50%;
   transform: translate(-50%, 50%);
   width: 25vw;
