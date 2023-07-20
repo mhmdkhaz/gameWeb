@@ -98,7 +98,12 @@ export default RootLayout;
 const NavbarLink = styled.nav`
   width: 100%;
   height: 80px;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px) !important;
+  -webkit-backdrop-filter: blur(50px) !important;
+  -moz-backdrop-filter: blur(50px) !important;
+  -ms-backdrop-filter: blur(50px) !important;
+  -o-backdrop-filter: blur(50px) !important;
+  filter: blur(50px) !important;
   z-index: 1001;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 25px 0px;
   transition: all 0.3s ease-in-out 0s;
