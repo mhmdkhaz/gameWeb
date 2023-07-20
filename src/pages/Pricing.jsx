@@ -3,7 +3,7 @@ import { AiOutlineCheck } from "react-icons/ai";
 
 function Pricing() {
   return (
-    <section className="backgroundDark flex flex-col justify-center items-center relative py-36 h-screen">
+    <section className="backgroundDark flex flex-col justify-center items-center relative py-36 lg:h-screen h-auto">
       <h1 className="capitalize text-white text-3xl my-5">Pricing Plan.</h1>
       <div className="cardPricing flex flex-wrap flex-row justify-center items-center gap-4">
         <CardPricing className="pricing flex flex-col justify-center items-center px-5">

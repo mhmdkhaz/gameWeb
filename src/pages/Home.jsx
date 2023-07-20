@@ -29,7 +29,7 @@ function Home() {
     <header>
       <BgImages>
         <Overlay backgroundColor="rgba(0, 0, 0, 0.8)" zIndex="1" />
-        <section className="flex flex-row justify-center relative py-36">
+        <section className="flex flex-row justify-center relative lg:py-36 py-5">
           <div style={{ width: "90%", zIndex: "100" }}>
             <h1 className="capitalize text-center text-3xl text-white font-bold my-8">
               top games.

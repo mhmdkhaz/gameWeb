@@ -126,7 +126,7 @@ const LogInDiv = styled.div`
   width: 450px;
   height: auto;
   border-radius: 10px;
-  z-index: 999;
+  z-index: 500;
   backdrop-filter: blur(50px);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 20px 0px;
   animation: 0.1s linear 0s 1 normal none running YFHiY;

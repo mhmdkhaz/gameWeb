@@ -43,7 +43,7 @@ function GamesPlatform({ text, startLength, endLength, stopShow }) {
 
   return (
     <section className="backgroundDark flex justify-center">
-      <div style={{ width: "90%" }} className="py-32 px-4 z-50">
+      <div style={{ width: "90%" }} className="lg:py-36 py-5 px-4 z-50">
         <h1 className="text-center text-3xl text-white">{text}</h1>
         <ul className="filterLi capitalize flex sm:flex-row flex-col justify-center gap-4 my-8 text-center">
           <ListFilter onClick={() => handleFilter("Shooter")}>pc</ListFilter>

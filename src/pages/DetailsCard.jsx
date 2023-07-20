@@ -34,7 +34,7 @@ function DetailsCard() {
   }
 
   return (
-    <div className="py-36 backgroundDark ">
+    <div className="lg:py-36 py-5 backgroundDark ">
       <section className="flex justify-center">
         <section style={{ width: "90%" }}>
           <div className="grid lg:grid-cols-12 sm:grid-cols-1 justify-center items-start gap-4 text-white">
