@@ -66,7 +66,10 @@ function RootLayout() {
                   className="w flex justify-start lg:justify-center items-center relative text-white mx-0 lg:mx-4"
                   key={index}
                 >
-                  <NavLink to={item.to}>
+                  <NavLink
+                    to={item.to}
+                    onClick={() => setCloseOpeen(!closeOpen)}
+                  >
                     <span className="line absolute bottom-0 left-0 w-0 h-1 ease-in duration-300 "></span>
                     <StyledIcon>{item.icon}</StyledIcon>
                     {item.title}
