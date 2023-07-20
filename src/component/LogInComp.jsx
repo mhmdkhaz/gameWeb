@@ -125,5 +125,4 @@ const LogInDiv = styled.div`
   @media (max-width: 640px) {
     width: 80vw;
   }
-  
 `;

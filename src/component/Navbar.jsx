@@ -103,7 +103,6 @@ const NavbarLink = styled.nav`
   -moz-backdrop-filter: blur(50px) !important;
   -ms-backdrop-filter: blur(50px) !important;
   -o-backdrop-filter: blur(50px) !important;
-  filter: blur(50px) !important;
   z-index: 1001;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 25px 0px;
   transition: all 0.3s ease-in-out 0s;
