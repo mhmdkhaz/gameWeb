@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // icons
 import { AiOutlineDollar } from "react-icons/ai";
@@ -46,21 +46,39 @@ function RootLayout() {
   const [openLogin, setOpenLogin] = useState(false);
   const handleCloseLogin = () => setOpenLogin(false);
 
+  //
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setCloseOpeen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  });
+
   return (
     <div>
       <NavbarLink
+        ref={headerRef}
         className={`from-transparent fixed w-full z-5 ${
           closeOpen ? "left-0 lg:left-0 " : "left-[-100%] lg:left-0"
         }`}
       >
         <div className="max-w-screen-xl flex flex-row lg:flex-row-reverse flex-wrap items-center justify-between h-full mx-auto mt-10 lg:mt-0 ">
-          <div className="BtnLog ">
-            <div onClick={() => setOpenLogin(true)}>
+          <div className="BtnLog">
+            <div className="ml-5" onClick={() => setOpenLogin(true)}>
               <Button onClick={() => setCloseOpeen(!closeOpen)}>login</Button>
             </div>
           </div>
           <div className="h-full lg:w-auto w-full">
-            <ul className="font-medium flex lg:flex-row h-full flex-col">
+            <ul className="font-medium flex lg:flex-row h-full flex-col ml-5">
               {navbarData.map((item, index) => (
                 <ListNav
                   className="w flex justify-start lg:justify-center items-center relative text-white mx-0 lg:mx-4"
@@ -81,7 +99,7 @@ function RootLayout() {
         </div>
       </NavbarLink>
       {/* add button to close and open sidebar in mobile */}
-      <div className="text-white z-50">
+      <div className="text-white z-50" ref={headerRef}>
         <CloseButton
           className="fixed bottom-5 right-5 z-[9999] lg:hidden block "
           onClick={() => setCloseOpeen(!closeOpen)}
