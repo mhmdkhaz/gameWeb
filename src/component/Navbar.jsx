@@ -50,7 +50,7 @@ function RootLayout() {
     <div>
       <NavbarLink
         className={`from-transparent fixed w-full z-5 ${
-          closeOpen ? "lg:left-[-100%] left-0 " : "lg:left-0 left-[-100%]"
+          closeOpen ? "left-0 lg:left-0 " : "left-[-100%] lg:left-0"
         }`}
       >
         <div className="max-w-screen-xl flex flex-row lg:flex-row-reverse flex-wrap items-center justify-between h-full mx-auto mt-10 lg:mt-0 ">

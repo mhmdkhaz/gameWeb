@@ -15,8 +15,6 @@ function DetailsCard() {
     id
   );
 
-  console.log(id);
-
   const [letngthWords, setLengthWords] = useState(80);
   const [StateLengt, setStateLength] = useState(true);
 
