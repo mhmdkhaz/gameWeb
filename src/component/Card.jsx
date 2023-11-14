@@ -2,14 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 import ChangeColorGenre from "../component/ChangeColorGenre";
+// lazy load
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Card({ short_description, image, genre, title }) {
   return (
     <CardMain className="card flex flex-col w-full h-full">
-      <img
+      <LazyLoadImage
         src={image}
         alt="short_description "
         className="rounded-md w-screen"
+        effect="blur"
       />
       <h1 className="text-white my-9 text-xl capitalize">{title}</h1>
       <div className="discription">

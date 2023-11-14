@@ -5,6 +5,10 @@ import Loader from "../component/Loader";
 import ChangeColorGenre from "../component/ChangeColorGenre";
 import GameYouMayLike from "../component/GameYouMayLike";
 
+// lazy load
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import { BsCloudDownload } from "react-icons/bs";
 import Error from "./Error";
 
@@ -39,7 +43,11 @@ function DetailsCard() {
             <div className="sideLeft sm:col-span-1 lg:col-span-4 ">
               <h1 className="text-2xl capitalize">{data.title}</h1>
               <p className="text-[#ffffffcc] my-5">{data.short_description}</p>
-              <img src={data.thumbnail} alt="" className="w-full" />
+              <LazyLoadImage
+                src={data.thumbnail}
+                className="w-full"
+                effect="blur"
+              />
             </div>
             <div className="rightSide sm:col-span-1 lg:col-span-8 relative">
               <h1 className="capitalize text-3xl">about the game</h1>
@@ -92,10 +100,11 @@ function DetailsCard() {
           <div className="flex flex-wrap justify-center gap-4 my-8">
             {data.screenshots.map((itemImg) => {
               return (
-                <img
+                <LazyLoadImage
                   src={itemImg.image}
                   alt=""
                   className="w-72"
+                  effect="blur"
                   key={itemImg.id}
                 />
               );
